@@ -1,0 +1,922 @@
+@import url("https://fonts.cdnfonts.com/css/brannboll-fet?styles=49738,49739");
+/* @import url("https://fonts.cdnfonts.com/css/franklin-gothic-medium-cond"); */
+@import url("https://allfont.net/allfont.css?fonts=franklin-gothic-medium");
+@font-face {
+  src: url(./assets/AGT_Alvand.otf);
+  font-family: AGTarabic;
+}
+@font-face {
+  src: url(./assets/alfont_com_AlFont_com_DINNextLTArabic-Regular.ttf);
+  font-family: DINarabic;
+}
+:root {
+  --main-color: #ef8a03;
+  --secondary-color: #bb955c;
+  /* --main-font: franklin-gothic-medium-cond, sans-serif; */
+  --main-font: "Franklin Gothic Medium", arial;
+  --secondary-font: Brannboll Fet;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+/* #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+} */
+
+.parent {
+  background: #010202;
+}
+
+.stepThreeParent {
+  background-image: linear-gradient(rgba(1, 2, 2, 0.7), rgba(1, 2, 2, 0.7)),
+    url(./assets/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container {
+  width: 1440px;
+  height: 1024px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.backdrop-filter-container {
+  backdrop-filter: blur(15px);
+}
+
+.logo {
+  margin-top: 59px;
+}
+
+.navigationArrow {
+  cursor: pointer;
+}
+
+.leftArrow {
+  rotate: 180deg;
+  width: 68px;
+  height: 52px;
+}
+
+.leftArrow path {
+  fill: transparent;
+  stroke: var(--main-color);
+  stroke-width: 2;
+}
+
+.unActiveLeftArrow {
+  visibility: hidden;
+}
+
+.unActiveRightArrow {
+  visibility: hidden;
+}
+
+.navigationSection {
+  display: flex;
+  position: absolute;
+  top: 901px;
+  width: 1300px;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  /* margin-top: 151px;
+  margin-bottom: 71px; */
+}
+
+.navigationSection div {
+  display: flex;
+  column-gap: 24px;
+  align-items: center;
+}
+
+.navigationSection div p {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+}
+
+.navigationSection div .activePoint {
+  width: 32px;
+  height: 32px;
+  background-color: var(--main-color);
+}
+
+.allTitel {
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.label {
+  font-family: var(--main-font);
+  font-size: 19px;
+  color: var(--secondary-color);
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  caret-color: var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 10px;
+  border: none;
+  font-size: 24px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px black inset;
+  -webkit-text-fill-color: var(--secondary-color);
+}
+
+/* ================================ */
+/* =========== welcomePage ======== */
+/* ================================ */
+
+.welcomePage-title {
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 64px;
+  margin-top: -62px;
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%); */
+}
+
+.welcomePage-question {
+  display: flex;
+  /* position: absolute; */
+  left: 842px;
+  top: 320px;
+  column-gap: 8px;
+}
+
+/* .welcomePage-question span {
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  font-size: 64px;
+  line-height: 140%;
+} */
+
+.welcomePage-question span:first-child,
+.welcomePage-question span:last-child {
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  font-size: 64px;
+  line-height: 140%;
+}
+
+.welcomePage-question span:nth-child(2) {
+  color: var(--secondary-color);
+  font-family: var(--main-font);
+  font-size: 32px;
+  line-height: 36px;
+  align-self: flex-end;
+}
+
+.welcomePage-ans {
+  color: var(--secondary-color);
+  font-family: var(--main-font);
+  font-size: 24px;
+  line-height: 33.6px;
+  word-spacing: 4px;
+  height: 311px;
+  width: 492px;
+  margin-top: 21px;
+
+  /* position: absolute; */
+  /* left: 842px; */
+  /* top: 439px; */
+}
+
+.welcomePage-ans span {
+  font-family: var(--secondary-font);
+  color: var(--main-color);
+  line-height: 140%;
+}
+
+.welcomePage-body {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 134px;
+  /* position: absolute; */
+  margin-top: 190px;
+}
+
+.welcomePage-form {
+  width: 640px;
+}
+
+.welcomePage-form select {
+  width: 100%;
+  border: 1px solid var(--secondary-color);
+  margin-bottom: 32px;
+  height: 56px;
+  padding: 19px 16px;
+  color: var(--secondary-color);
+  background-color: transparent;
+
+  appearance: none;
+  background-image: url(./assets/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 601px center;
+  cursor: pointer;
+}
+
+.welcomePage-form select option {
+  background-color: #010202;
+}
+
+.welcomePage-form .checkboxLabel {
+  font-family: var(--main-font);
+  font-size: 14px;
+
+  line-height: 16px;
+  color: var(--secondary-color);
+}
+
+.welcomePage-form .checkboxLabel span {
+  text-decoration: underline;
+}
+
+.welcomePage-form [type="checkbox"] {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+}
+
+.welcomePage-form [type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+  border-radius: 2px;
+}
+
+.welcomePage-form [type="checkbox"]:checked::before {
+  background-image: url(./assets/checkbox.png);
+}
+
+.welcomePage-checkbox-container {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.welcomePage-body-paragraph {
+  width: 492px;
+  text-align: justify;
+  margin-right: 36px;
+}
+
+/* ================================ */
+/* ======== SelectDatePage ======== */
+/* ================================ */
+
+.SelectDatePage-title {
+  font-family: var(--main-font);
+  font-size: 40px;
+  line-height: 45px;
+  margin-top: -52px;
+
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  top: 71px; */
+}
+
+.SelectDatePage-body {
+  display: flex;
+  column-gap: 251px;
+  margin-top: 115px;
+}
+
+.SelectDatePage-dateForm {
+  width: 411px;
+}
+
+.SelectDatePage-form {
+  width: 638px;
+}
+
+.SelectDatePage-name-input {
+  display: flex;
+  margin-bottom: 32px;
+  column-gap: 24px;
+}
+
+.SelectDatePage-name-input label {
+  margin-top: 0;
+}
+
+.SelectDatePage-form input {
+  border: 1px solid var(--secondary-color);
+  height: 56px;
+  background-color: transparent;
+  width: 638px;
+}
+
+.SelectDatePage-form .SelectDatePage-lastLabel {
+  margin-top: 32px;
+}
+
+.SelectDatePage-name-input input {
+  width: 307px;
+}
+
+.calender-img {
+  width: 411px;
+  height: 423.06px;
+  margin-bottom: 70px;
+}
+
+.SelectDatePage-dateForm select {
+  width: 100%;
+  border: 1px solid var(--secondary-color);
+  margin-bottom: 32px;
+  height: 56px;
+  padding: 19px 16px;
+  color: var(--secondary-color);
+  background-color: transparent;
+
+  appearance: none;
+  background-image: url(./assets/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 380px center;
+  cursor: pointer;
+}
+
+.SelectDatePage-dateForm select option {
+  background-color: #010202;
+}
+
+.SelectDatePage-form input[type="number"]::-webkit-outer-spin-button,
+.SelectDatePage-form input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+/* ================================ */
+/* =========== OrderPage ========== */
+/* ================================ */
+
+.OrderPage-title {
+  font-family: var(--main-font);
+  font-size: 40px;
+  line-height: 45px;
+  margin-top: -65px;
+  position: relative;
+}
+
+.OrderPage-body {
+  display: flex;
+  column-gap: 240px;
+  margin-top: 80px;
+}
+
+.orderPage-orderDetalis-container {
+  width: 638px;
+  height: 323px;
+  background: linear-gradient(
+    180deg,
+    rgba(103, 103, 103, 0.29) 0%,
+    rgba(116, 114, 114, 0) 100%
+  );
+  border-radius: 8px;
+  /* filter: blur(3px); */
+}
+
+.orderPage-arOrderName {
+  font-family: AGTarabic;
+  font-size: 55px;
+  line-height: 140%;
+  color: var(--main-color);
+  margin-top: 11px;
+}
+
+.orderPage-enOrderName {
+  font-family: var(--secondary-font);
+  font-size: 32px;
+  line-height: 140%;
+  color: var(--main-color);
+  margin-top: 22px;
+}
+
+.orderPage-orderName {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  column-gap: 70px;
+}
+
+.orderPage-orderDetalis {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 12px 28px 0 28px;
+  justify-content: space-between;
+}
+
+.orderPage-arOrderDetalis {
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--secondary-color);
+  font-family: DINarabic;
+  width: 237px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.orderPage-arOrderDetalis .att {
+  text-align: center;
+  width: 77px;
+  height: 40px;
+  border: 1px solid var(--secondary-color);
+}
+
+.orderPage-arOrderDetalis .value {
+  text-align: center;
+  width: 77px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  color: white;
+  justify-self: end;
+}
+
+.orderPage-arOrderDetalis .price {
+  text-align: center;
+  width: 155px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  color: white;
+  justify-self: end;
+}
+
+.orderPage-enOrderDetalis {
+  font-size: 22px;
+  line-height: 32px;
+  color: var(--secondary-color);
+  font-family: DINarabic;
+  width: 237px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.orderPage-enOrderDetalis .att {
+  text-align: center;
+  width: 77px;
+  height: 40px;
+  border: 1px solid var(--secondary-color);
+}
+
+.orderPage-enOrderDetalis .value {
+  text-align: center;
+  width: 77px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.orderPage-enOrderDetalis .price {
+  grid-column: -2/-1;
+  text-align: center;
+  width: 155px;
+  height: 40px;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.orderPage-moreDetalis {
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 127px;
+}
+
+.orderPage-moreDetalis-ar {
+  font-family: DINarabic;
+  font-size: 12px;
+  color: white;
+  line-height: 18px;
+  margin-right: 109px;
+  margin-top: 4px;
+}
+
+.orderPage-moreDetalis-en {
+  font-family: var(--main-font);
+  line-height: 17px;
+  font-size: 15px;
+  color: white;
+  margin-top: 9px;
+}
+
+.orderPage-tax {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.orderPage-tax-en {
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  font-family: var(--main-font);
+}
+
+.orderPage-tax-ar {
+  font-size: 14px;
+  line-height: 21px;
+  color: white;
+  font-family: DINarabic;
+}
+
+.orderPage-orderImg {
+  display: flex;
+  column-gap: 40px;
+  align-items: center;
+}
+
+.leftArrowMeal {
+  rotate: 180deg;
+}
+
+.orderPage-addButton {
+  width: 135px;
+  height: 64px;
+  background-color: var(--main-color);
+  text-align: center;
+  padding-top: 16px;
+  color: white;
+  font-family: var(--main-font);
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.orderPage-orderImg-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 44px;
+  align-items: center;
+}
+
+.orderPage-orderDetalisAndCart-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  align-items: center;
+}
+
+.orderPage-orderCart-container {
+  width: 418px;
+  height: 284.28px;
+  background: linear-gradient(
+    105.53deg,
+    rgba(255, 255, 255, 0.212) 21.82%,
+    rgba(255, 255, 255, 0.053) 97.05%
+  );
+  border-radius: 35.5px;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 28px;
+  position: relative;
+}
+
+.orderPage-orderCart-seatsNumber {
+  font-size: 21.2542px;
+  line-height: 18px;
+  color: white;
+  font-family: var(--main-font);
+}
+
+.orderPage-orderCart-seatsNumber span {
+  font-size: 12.5px;
+  line-height: 10px;
+  color: #cacaca;
+}
+
+.orderPage-orderCart-mealsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+}
+
+.orderPage-orderCart-mealList {
+  display: flex;
+  align-items: center;
+}
+
+.orderPage-orderCart-mealsList-container {
+  width: 100%;
+}
+
+.orderPage-orderCart-mealList span {
+  width: 8.86px;
+  height: 8.86px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+
+.orderPage-orderCart-mealList img {
+  height: 75px;
+  width: 43px;
+  margin-left: 14px;
+  margin-right: 10px;
+}
+
+.orderPage-orderCart-mealList .mealName {
+  font-size: 24px;
+  line-height: 20px;
+  font-family: var(--main-font);
+  color: white;
+  margin-bottom: 6.5px;
+}
+
+.orderPage-orderCart-mealList .mealPrice {
+  font-size: 14px;
+  line-height: 12px;
+  font-family: var(--main-font);
+  color: #cacaca;
+}
+
+.orderPage-orderCart-mealList .basket {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  margin-left: auto;
+}
+
+.orderPage-orderCart-container::before {
+  content: "";
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-image: url(./assets/cartIcon.png),
+    linear-gradient(
+      109.7deg,
+      rgba(255, 255, 255, 0.212) 27.64%,
+      rgba(255, 255, 255, 0.053) 94.29%
+    );
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.orderPageIcon {
+  position: absolute;
+  left: 1177px;
+}
+
+.OrderPage-title span {
+  display: block;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  right: 0;
+  border: 4px solid var(--main-color);
+  border-radius: 50%;
+  top: 0;
+}
+
+/* ================================ */
+/* =========== PaymentPage ========== */
+/* ================================ */
+
+.PaymentPage-title {
+  font-family: var(--main-font);
+  font-size: 40px;
+  line-height: 45px;
+  margin-top: -52px;
+}
+
+.PaymentPage-body {
+  display: flex;
+  column-gap: 24px;
+  margin-top: 115px;
+}
+
+.PaymentPage-form {
+  width: 638px;
+  display: flex;
+  flex-direction: column;
+}
+
+.PaymentPage-form input {
+  border: 1px solid var(--secondary-color);
+  height: 56px;
+  background-color: transparent;
+  width: 638px;
+}
+
+.PaymentPage-firstInput {
+  margin-bottom: 24px;
+}
+
+.PaymentPage-date-input {
+  display: flex;
+  column-gap: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.PaymentPage-date-input input {
+  width: 307px;
+}
+
+.PaymentPage-form input[type="number"]::-webkit-outer-spin-button,
+.PaymentPage-form input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.PaymentPage-form .checkboxLabel {
+  font-family: var(--main-font);
+  font-size: 14px;
+
+  line-height: 16px;
+  color: var(--secondary-color);
+}
+
+.PaymentPage-form [type="checkbox"] {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  border: none;
+}
+
+.PaymentPage-form [type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+  border-radius: 2px;
+}
+
+.PaymentPage-form [type="checkbox"]:checked::before {
+  background-image: url(./assets/checkbox.png);
+}
+
+.PaymentPage-checkbox-container {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  margin-top: 16px;
+}
+
+.PaymentPage-payButton {
+  width: 135px;
+  height: 64px;
+  background-color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 28px;
+  color: white;
+  line-height: 32px;
+  padding: 16px;
+  text-align: center;
+  align-self: center;
+  margin-top: 36px;
+}
+
+.PaymentPage-checkout {
+  width: 638px;
+  height: 505px;
+  background: linear-gradient(
+    180deg,
+    rgba(103, 103, 103, 0.29) 0%,
+    rgba(116, 114, 114, 0) 100%
+  );
+  border-radius: 8px;
+  align-self: center;
+  padding: 24px;
+}
+
+.PaymentPage-checkout-title {
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-size: 40px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.PaymentPage-checkout-body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  margin-top: 24px;
+}
+
+.PaymentPage-checkout-body p {
+  font-family: var(--main-font);
+  color: var(--main-color);
+  font-size: 28px;
+  line-height: 140%;
+}
+
+.PaymentPage-checkout-body p span {
+  font-family: var(--main-font);
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+
+.PaymentPage-checkout-body .PaymentPage-checkout-price {
+  color: white;
+}
+
+.PaymentPage-checkout-note {
+  font-family: var(--main-font);
+  color: var(--secondary-color);
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ================================ */
+/* =========== CangPage ========== */
+/* ================================ */
+
+.CangPage {
+  background: linear-gradient(
+    180deg,
+    rgba(103, 103, 103, 0.29) 0%,
+    rgba(116, 114, 114, 0) 100%
+  );
+  border-radius: 8px;
+  width: 534px;
+  height: 279px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+}
+
+.CangPage-title {
+  font-family: var(--main-font);
+  font-size: 40px;
+  line-height: 45px;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.CangPage-par {
+  font-size: 24px;
+  font-family: var(--main-font);
+  line-height: 24px;
+  text-align: center;
+  color: var(--secondary-color);
+  margin-top: 8px;
+}
+
+.CangPage-numberLabel {
+  font-family: var(--main-font);
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  color: var(--main-color);
+  margin-top: 29px;
+  margin-bottom: 11px;
+}
+
+.CangPage-number {
+  display: flex;
+  justify-content: center;
+  column-gap: 13px;
+  font-size: 24px;
+  font-family: var(--main-font);
+  line-height: 27px;
+  color: var(--secondary-color);
+}
