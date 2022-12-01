@@ -32,7 +32,7 @@ export default createStore({
 
     setState(state, value) {
       state.order={...state.order,...value}
-      console.log(this.state);
+      console.log(this.state.order);
     },
   },
   actions: {},
