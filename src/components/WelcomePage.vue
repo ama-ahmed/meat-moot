@@ -52,7 +52,7 @@ export default {
     });
 
     const store = useStore();
-    const fun = () => store.commit("setStateWelcome", { ...welcomePageState });
+    const fun = () => store.commit("setState", { ...welcomePageState });
 
     watch(
       welcomePageState,

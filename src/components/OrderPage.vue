@@ -97,7 +97,7 @@ export default {
   },
   setup() {
     const store = useStore();
-    const seats = computed(() => store.state.seats);
+    const seats = computed(() => store.state.order.seats);
 
     return { seats };
   },

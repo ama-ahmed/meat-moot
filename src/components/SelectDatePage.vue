@@ -42,7 +42,7 @@ export default {
     });
 
     const store = useStore();
-    const fun = () => store.commit("setStateDate", { ...SelectDatePageState });
+    const fun = () => store.commit("setState", { ...SelectDatePageState });
 
     watch(
       SelectDatePageState,

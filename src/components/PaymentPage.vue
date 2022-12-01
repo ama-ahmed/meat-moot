@@ -63,9 +63,9 @@ export default {
   name: "PaymentPage",
   setup() {
     const store = useStore();
-    const seats = computed(() => store.state.seats);
-    const time = computed(() => store.state.time);
-    const branch = computed(() => store.state.branch);
+    const seats = computed(() => store.state.order.seats);
+    const time = computed(() => store.state.order.time);
+    const branch = computed(() => store.state.order.branch);
 
     return { seats, time, branch };
   },
