@@ -1,5 +1,4 @@
 @import url("https://fonts.cdnfonts.com/css/brannboll-fet?styles=49738,49739");
-/* @import url("https://fonts.cdnfonts.com/css/franklin-gothic-medium-cond"); */
 @import url("https://allfont.net/allfont.css?fonts=franklin-gothic-medium");
 @font-face {
   src: url(./assets/AGT_Alvand.otf);
@@ -12,7 +11,6 @@
 :root {
   --main-color: #ef8a03;
   --secondary-color: #bb955c;
-  /* --main-font: franklin-gothic-medium-cond, sans-serif; */
   --main-font: "Franklin Gothic Medium", arial;
   --secondary-font: Brannboll Fet;
 }
